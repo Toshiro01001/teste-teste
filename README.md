@@ -1,5 +1,7 @@
 # Fichário
 
+![Consulta de registros fictícios no Fichário](docs/tela.webp)
+
 Sistema de consulta e cadastro de registros, feito como demonstração técnica.
 
 **Todas as pessoas e dados são fictícios.** Não é um serviço oficial, não tem ligação com nenhum órgão público e não recebe nem encaminha informações. Em caso real, procure a polícia.
@@ -106,4 +108,4 @@ HTML, CSS e JavaScript sem bibliotecas; Java 17 com `com.sun.net.httpserver`; SQ
 
 ---
 
-Desenvolvido por Rodrigo Terroso Junior. O Claude, da Anthropic, foi usado como ferramenta durante o desenvolvimento.
+Desenvolvi este projeto e usei o Claude, da Anthropic, como ferramenta durante o desenvolvimento.
