@@ -1,6 +1,6 @@
-# Pessoas Desaparecidas
+# Fichário
 
-Site estático feito como teste, na pasta `PoliciaIndex/`: uma lista de pessoas e uma página para cada uma. Veja `lista.html` e `lista.txt`.
+Sistema de demonstração de consulta e cadastro de registros, com dados 100% fictícios. A tela está em `index.html` e `assets/`, os dados do modo estático em `dados/registros.json`, a API em Java puro em `servidor-java/` e os testes em `tests/`. `PoliciaIndex/lista.html` só redireciona o endereço antigo. Veja o `README.md`.
 
 ## Regras de trabalho
 

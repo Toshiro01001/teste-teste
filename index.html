@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' http://localhost:* http://127.0.0.1:*; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="description" content="Sistema de demonstração de consulta e cadastro de registros. Todas as pessoas e dados são fictícios.">
+<title>Fichário, sistema de demonstração</title>
+<link rel="icon" href="assets/icone.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/estilo.css">
+<script src="assets/config.js" defer></script>
+<script src="assets/app.js" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo" id="pular">Pular para o conteúdo</a>
+<p class="faixa">Sistema de demonstração. Todas as pessoas e dados são fictícios.</p>
+
+<header class="topo">
+  <a class="marca" href="#/">Fichário</a>
+  <nav aria-label="Principal">
+    <ul>
+      <li><a href="#/" data-rota="lista">Consulta</a></li>
+      <li><a href="#/novo" data-rota="novo">Novo registro</a></li>
+      <li><a href="#/como-funciona" data-rota="como">Como isto funciona</a></li>
+    </ul>
+  </nav>
+</header>
+
+<p class="aviso-real"><strong>Em caso real, procure a polícia imediatamente</strong> (em emergência, ligue 190). Este site não recebe nem encaminha nenhuma informação.</p>
+
+<main id="conteudo" tabindex="-1">
+  <noscript><p class="alerta">Este sistema precisa de JavaScript ligado para funcionar.</p></noscript>
+  <p class="alerta" id="erro-geral" role="alert" hidden></p>
+
+  <section id="v-lista" hidden>
+    <h1 tabindex="-1">Consulta de registros</h1>
+    <div class="consulta">
+      <div class="col-filtros">
+        <form id="f-filtros" novalidate>
+          <div class="campo">
+            <label for="busca">Buscar por nome, cidade ou número</label>
+            <input id="busca" name="busca" type="search" maxlength="80" autocomplete="off">
+          </div>
+          <details id="mais-filtros">
+            <summary>Mais filtros <span id="qtd-filtros"></span></summary>
+            <div class="campo">
+              <label for="cidade">Cidade</label>
+              <select id="cidade" name="cidade"><option value="">Todas as cidades</option></select>
+            </div>
+            <fieldset>
+              <legend>Faixa de idade</legend>
+              <div class="par">
+                <div class="campo"><label for="idadeMin">De</label><input id="idadeMin" name="idadeMin" type="number" inputmode="numeric" min="0" max="150" aria-describedby="erro-filtros"></div>
+                <div class="campo"><label for="idadeMax">Até</label><input id="idadeMax" name="idadeMax" type="number" inputmode="numeric" min="0" max="150" aria-describedby="erro-filtros"></div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Data do último registro</legend>
+              <div class="par datas">
+                <div class="campo"><label for="dataDe">De</label><input id="dataDe" name="dataDe" type="date" aria-describedby="erro-filtros"></div>
+                <div class="campo"><label for="dataAte">Até</label><input id="dataAte" name="dataAte" type="date" aria-describedby="erro-filtros"></div>
+              </div>
+            </fieldset>
+            <p class="erro" id="erro-filtros" role="alert" hidden></p>
+            <button type="button" class="botao secundario" id="limpar">Limpar filtros</button>
+          </details>
+        </form>
+      </div>
+
+      <div class="col-resultados">
+        <div class="abas" role="group" aria-label="Filtrar por situação" id="abas"></div>
+        <div class="pasta">
+          <div class="proporcao" id="proporcao" aria-hidden="true"></div>
+          <div class="barra">
+            <h2 id="titulo-resultados" tabindex="-1">Resultados</h2>
+            <p id="contagem" role="status"></p>
+            <div class="campo ordem">
+              <label for="ordenar">Ordenar por</label>
+              <select id="ordenar">
+                <option value="-data">Mais recentes primeiro</option>
+                <option value="data">Mais antigos primeiro</option>
+                <option value="nome">Nome, de A a Z</option>
+                <option value="-nome">Nome, de Z a A</option>
+                <option value="idade">Idade, menor primeiro</option>
+                <option value="-idade">Idade, maior primeiro</option>
+                <option value="cidade">Cidade, de A a Z</option>
+                <option value="-cidade">Cidade, de Z a A</option>
+              </select>
+            </div>
+            <button type="button" class="botao secundario" id="exportar">Exportar CSV</button>
+          </div>
+          <table class="tabela" id="tabela" role="table">
+            <caption class="invisivel">Registros fictícios encontrados</caption>
+            <thead role="rowgroup"><tr role="row">
+              <th role="columnheader" scope="col">Pessoa</th>
+              <th role="columnheader" scope="col">Cidade</th>
+              <th role="columnheader" scope="col">Idade</th>
+              <th role="columnheader" scope="col">Último registro</th>
+              <th role="columnheader" scope="col">Situação</th>
+            </tr></thead>
+            <tbody role="rowgroup" id="linhas"></tbody>
+          </table>
+          <div class="vazio" id="vazio" hidden>
+            <p>Nenhum registro com estes filtros. Limpe os filtros ou amplie a faixa de idade e de data.</p>
+            <button type="button" class="botao" id="limpar-vazio">Limpar filtros</button>
+          </div>
+          <nav class="paginas" aria-label="Páginas de resultados" id="paginas"></nav>
+        </div>
+      </div>
+
+      <section class="col-contagens" aria-labelledby="titulo-contagens">
+        <h2 id="titulo-contagens">Contagens</h2>
+        <p class="nota">Acompanham os filtros escolhidos.</p>
+        <h3>Por cidade</h3>
+        <ul class="medidas" id="por-cidade"></ul>
+        <h3>Por idade</h3>
+        <ul class="medidas" id="por-idade"></ul>
+      </section>
+    </div>
+  </section>
+
+  <section id="v-detalhe" hidden>
+    <p><a id="voltar" href="#/">Voltar à consulta</a></p>
+    <div class="detalhe">
+      <article class="ficha" id="ficha">
+        <div class="ficha-topo">
+          <span id="ficha-avatar"></span>
+          <div>
+            <h1 id="ficha-nome" tabindex="-1"></h1>
+            <p class="situacao" id="ficha-situacao"></p>
+          </div>
+        </div>
+        <dl id="ficha-dados"></dl>
+        <h2>Descrição</h2>
+        <p id="ficha-descricao"></p>
+      </article>
+
+      <div class="painel-form">
+        <h2>Tenho uma informação</h2>
+        <p class="nota-forte" id="nota-informacao"></p>
+        <form id="f-info" novalidate>
+          <p class="nota">Preencha com dados inventados. Só o contato é opcional.</p>
+          <div class="resumo-erros" id="f-info-erros" tabindex="-1" role="alert" hidden></div>
+          <div class="campo"><label for="i-local">Onde foi</label><input id="i-local" name="local" maxlength="80" autocomplete="off" aria-required="true" aria-describedby="i-local-erro"><p class="erro" id="i-local-erro" hidden></p></div>
+          <div class="campo"><label for="i-data">Quando foi</label><input id="i-data" name="data" type="date" aria-required="true" aria-describedby="i-data-erro"><p class="erro" id="i-data-erro" hidden></p></div>
+          <div class="campo"><label for="i-relato">O que foi visto</label><textarea id="i-relato" name="relato" rows="4" maxlength="600" aria-required="true" aria-describedby="i-relato-erro"></textarea><p class="erro" id="i-relato-erro" hidden></p></div>
+          <div class="campo"><label for="i-contato">E-mail para retorno (opcional)</label><input id="i-contato" name="contato" type="email" maxlength="120" autocomplete="off" aria-describedby="i-contato-erro"><p class="erro" id="i-contato-erro" hidden></p></div>
+          <div class="campo marcar"><input id="i-ciente" name="ciente" type="checkbox" aria-required="true" aria-describedby="i-ciente-erro"><label for="i-ciente">Entendi que esta é uma demonstração e que ninguém vai receber esta informação.</label><p class="erro" id="i-ciente-erro" hidden></p></div>
+          <button class="botao" type="submit">Testar o envio</button>
+        </form>
+        <div class="confirmacao" id="f-info-ok" tabindex="-1" hidden>
+          <p id="f-info-ok-texto"></p>
+          <p>Em caso real, procure a polícia.</p>
+          <button type="button" class="botao secundario" id="f-info-nova">Preencher de novo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="v-novo" hidden>
+    <h1 tabindex="-1">Novo registro</h1>
+    <div class="painel-form estreito">
+      <p class="nota-forte" id="nota-novo"></p>
+      <form id="f-novo" novalidate>
+        <p class="nota">Use só dados inventados. Todos os campos são obrigatórios.</p>
+        <div class="resumo-erros" id="f-novo-erros" tabindex="-1" role="alert" hidden></div>
+        <div class="campo"><label for="n-nome">Nome fictício</label><input id="n-nome" name="nome" maxlength="80" autocomplete="off" aria-required="true" aria-describedby="n-nome-erro"><p class="erro" id="n-nome-erro" hidden></p></div>
+        <div class="par">
+          <div class="campo"><label for="n-idade">Idade</label><input id="n-idade" name="idade" type="number" inputmode="numeric" min="18" max="110" aria-required="true" aria-describedby="n-idade-erro"><p class="erro" id="n-idade-erro" hidden></p></div>
+          <div class="campo"><label for="n-situacao">Situação</label><select id="n-situacao" name="situacao" aria-required="true" aria-describedby="n-situacao-erro"><option value="">Escolha</option><option value="em_aberto">Em aberto</option><option value="localizada">Localizada</option><option value="encerrado">Encerrado</option></select><p class="erro" id="n-situacao-erro" hidden></p></div>
+        </div>
+        <div class="campo"><label for="n-cidade">Cidade fictícia</label><input id="n-cidade" name="cidade" maxlength="60" autocomplete="off" aria-required="true" aria-describedby="n-cidade-erro"><p class="erro" id="n-cidade-erro" hidden></p></div>
+        <div class="campo"><label for="n-data">Data do último registro</label><input id="n-data" name="data" type="date" aria-required="true" aria-describedby="n-data-erro"><p class="erro" id="n-data-erro" hidden></p></div>
+        <div class="campo"><label for="n-descricao">Descrição</label><textarea id="n-descricao" name="descricao" rows="4" maxlength="600" aria-required="true" aria-describedby="n-descricao-erro"></textarea><p class="erro" id="n-descricao-erro" hidden></p></div>
+        <button class="botao" type="submit">Cadastrar registro</button>
+      </form>
+      <div class="confirmacao" id="f-novo-ok" tabindex="-1" hidden>
+        <p id="f-novo-ok-texto"></p>
+        <p><a id="f-novo-link" href="#/">Abrir a ficha</a></p>
+        <button type="button" class="botao secundario" id="f-novo-nova">Cadastrar outro</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="v-como" class="texto" hidden>
+    <h1 tabindex="-1">Como isto funciona</h1>
+    <p>Este sistema é um cadastro que dá para consultar. Ele tem duas partes que conversam: a tela que você está vendo e um servidor, que guarda e confere os dados.</p>
+    <h2>A tela</h2>
+    <p>Roda no navegador, sem instalar nada. Busca, filtros, ordenação, páginas, contagens e exportação para planilha ficam aqui. Cada ficha e cada busca tem endereço próprio: copie o link e a mesma tela abre em outro aparelho. Foi feita para funcionar pelo teclado e com leitor de tela.</p>
+    <h2>Os dados</h2>
+    <p>Na versão publicada, as fichas vêm de um arquivo fixo e o que você cadastra fica só nesta aba. Na versão com servidor, um programa em Java recebe os pedidos, confere cada campo, recusa o que estiver errado e explica o motivo. O projeto traz ainda o esquema SQL, o desenho das tabelas para guardar tudo em um banco de dados.</p>
+    <p>Agora os dados desta tela vêm de: <strong id="modo-como"></strong>.</p>
+    <h2>O que dá para adaptar</h2>
+    <p>A estrutura é a mesma para qualquer cadastro. Mudam os campos, os filtros e as regras:</p>
+    <ul>
+      <li><strong>Estoque:</strong> produto, quantidade, depósito, validade e alerta de falta.</li>
+      <li><strong>Clientes:</strong> contato, cidade, situação do atendimento e última conversa.</li>
+      <li><strong>Processos:</strong> número, responsável, prazo e andamento.</li>
+      <li><strong>Qualquer outro cadastro:</strong> associados, matrículas, equipamentos, chamados.</li>
+    </ul>
+    <h2>O que esta demonstração não faz</h2>
+    <p>Não é um serviço oficial, não tem ligação com nenhum órgão público e não recebe nem encaminha informações. As pessoas, as cidades e os casos foram inventados. Em caso real, procure a polícia.</p>
+  </section>
+
+  <section id="v-nao" hidden>
+    <h1 tabindex="-1">Página não encontrada</h1>
+    <p id="nao-texto">Este endereço não leva a nenhuma tela do sistema.</p>
+    <p><a href="#/">Ir para a consulta</a></p>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>Demonstração feita por <a href="https://mileumalinhas.com.br" rel="noopener">Mil e Uma Linhas!</a></p>
+  <p>Dados vindos de: <span id="modo-rodape"></span>. <a href="#/como-funciona">Como isto funciona</a></p>
+</footer>
+<div class="invisivel" id="anuncio" role="status"></div>
+</body>
+</html>

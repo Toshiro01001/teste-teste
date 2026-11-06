@@ -1,0 +1,578 @@
+[
+ {
+  "id": "REG-0001",
+  "nome": "Beltrano Exemplo Miragem",
+  "idade": 54,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "encerrado",
+  "data": "2026-04-04",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,88 m, cabelo crespo, usava vestido estampado. Último registro próximo à feira do bairro de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0002",
+  "nome": "Zutano Exemplo Lunária",
+  "idade": 67,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2024-03-10",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,62 m, cabelo crespo, usava jaqueta verde. Último registro na saída do mercado municipal de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0003",
+  "nome": "Mengana Imaginária Quimera",
+  "idade": 70,
+  "cidade": "Vila Exemplo",
+  "situacao": "em_aberto",
+  "data": "2026-07-24",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,57 m, cabelo grisalho, usava blusa de lã vinho. Último registro próximo à feira do bairro de Vila Exemplo."
+ },
+ {
+  "id": "REG-0004",
+  "nome": "Fulana de Teste Lunária",
+  "idade": 81,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "encerrado",
+  "data": "2026-09-23",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,71 m, cabelo curto, usava jaqueta verde. Último registro perto da biblioteca de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0005",
+  "nome": "Beltrana Fictícia Alvorada",
+  "idade": 18,
+  "cidade": "Alto da Demonstração",
+  "situacao": "em_aberto",
+  "data": "2026-10-12",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,54 m, cabelo crespo, usava camisa azul-clara. Último registro perto da biblioteca de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0006",
+  "nome": "Mengana de Teste Rascunho",
+  "idade": 73,
+  "cidade": "Alto da Demonstração",
+  "situacao": "em_aberto",
+  "data": "2026-03-09",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,89 m, cabelo crespo, usava casaco cinza. Último registro na saída do mercado municipal de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0007",
+  "nome": "Sicrana Imaginária Alvorada",
+  "idade": 38,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2026-05-09",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,61 m, cabelo comprido e preso, usava vestido estampado. Último registro na saída do mercado municipal de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0008",
+  "nome": "Zutano Fictício Ficção",
+  "idade": 60,
+  "cidade": "Porto Fictício",
+  "situacao": "em_aberto",
+  "data": "2024-10-16",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,52 m, cabelo curto, usava vestido estampado. Último registro próximo à feira do bairro de Porto Fictício."
+ },
+ {
+  "id": "REG-0009",
+  "nome": "Fulano Modelo Lunária",
+  "idade": 83,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2025-05-10",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,84 m, cabelo comprido e preso, usava camiseta branca. Último registro próximo à feira do bairro de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0010",
+  "nome": "Mengano Fictício Rascunho",
+  "idade": 50,
+  "cidade": "Porto Fictício",
+  "situacao": "localizada",
+  "data": "2025-09-19",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,81 m, cabelo curto, usava blusa de lã vinho. Último registro perto da biblioteca de Porto Fictício."
+ },
+ {
+  "id": "REG-0011",
+  "nome": "Fulana Exemplo Ficção",
+  "idade": 72,
+  "cidade": "Vila Exemplo",
+  "situacao": "em_aberto",
+  "data": "2026-05-14",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,89 m, cabelo crespo, usava camisa azul-clara. Último registro na saída do mercado municipal de Vila Exemplo."
+ },
+ {
+  "id": "REG-0012",
+  "nome": "Mengana Modelo Quimera",
+  "idade": 56,
+  "cidade": "Alto da Demonstração",
+  "situacao": "em_aberto",
+  "data": "2026-09-28",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,50 m, cabelo crespo, usava camisa azul-clara. Último registro próximo à feira do bairro de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0013",
+  "nome": "Mengana Imaginária Ficção",
+  "idade": 23,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "localizada",
+  "data": "2025-09-22",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,78 m, cabelo raspado, usava camiseta branca. Último registro perto da praça central de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0014",
+  "nome": "Mengano Fictício Lunária",
+  "idade": 77,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2026-06-07",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,50 m, cabelo grisalho, usava jaqueta verde. Último registro perto da biblioteca de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0015",
+  "nome": "Sicrana Exemplo Ficção",
+  "idade": 25,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "localizada",
+  "data": "2024-06-20",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,80 m, cabelo grisalho, usava jaqueta verde. Último registro perto da biblioteca de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0016",
+  "nome": "Zutano Fictício Penedo",
+  "idade": 71,
+  "cidade": "Campo de Teste",
+  "situacao": "encerrado",
+  "data": "2026-05-14",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,78 m, cabelo grisalho, usava vestido estampado. Último registro na rodoviária de Campo de Teste."
+ },
+ {
+  "id": "REG-0017",
+  "nome": "Beltrana Imaginária Rascunho",
+  "idade": 76,
+  "cidade": "Serra Modelo",
+  "situacao": "localizada",
+  "data": "2025-01-11",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,50 m, cabelo raspado, usava jaqueta verde. Último registro perto da biblioteca de Serra Modelo."
+ },
+ {
+  "id": "REG-0018",
+  "nome": "Fulano Fictício Rascunho",
+  "idade": 42,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2024-12-27",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,79 m, cabelo comprido e preso, usava casaco cinza. Último registro na rodoviária de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0019",
+  "nome": "Beltrano Imaginário Miragem",
+  "idade": 34,
+  "cidade": "Campo de Teste",
+  "situacao": "em_aberto",
+  "data": "2025-09-06",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,60 m, cabelo raspado, usava camiseta branca. Último registro na rodoviária de Campo de Teste."
+ },
+ {
+  "id": "REG-0020",
+  "nome": "Beltrano Exemplo Quimera",
+  "idade": 47,
+  "cidade": "Vila Exemplo",
+  "situacao": "em_aberto",
+  "data": "2025-11-13",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,67 m, cabelo grisalho, usava camiseta branca. Último registro próximo à feira do bairro de Vila Exemplo."
+ },
+ {
+  "id": "REG-0021",
+  "nome": "Beltrano Exemplo Protótipo",
+  "idade": 73,
+  "cidade": "Campo de Teste",
+  "situacao": "em_aberto",
+  "data": "2026-04-02",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,86 m, cabelo grisalho, usava blusa de lã vinho. Último registro perto da praça central de Campo de Teste."
+ },
+ {
+  "id": "REG-0022",
+  "nome": "Mengano Exemplo Lunária",
+  "idade": 43,
+  "cidade": "Campo de Teste",
+  "situacao": "em_aberto",
+  "data": "2026-10-14",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,52 m, cabelo comprido e preso, usava vestido estampado. Último registro na rodoviária de Campo de Teste."
+ },
+ {
+  "id": "REG-0023",
+  "nome": "Mengano Modelo Protótipo",
+  "idade": 53,
+  "cidade": "Campo de Teste",
+  "situacao": "localizada",
+  "data": "2026-10-21",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,84 m, cabelo curto, usava camiseta branca. Último registro perto da biblioteca de Campo de Teste."
+ },
+ {
+  "id": "REG-0024",
+  "nome": "Fulana Exemplo Protótipo",
+  "idade": 62,
+  "cidade": "Vila Exemplo",
+  "situacao": "em_aberto",
+  "data": "2026-07-09",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,89 m, cabelo raspado, usava casaco cinza. Último registro na saída do mercado municipal de Vila Exemplo."
+ },
+ {
+  "id": "REG-0025",
+  "nome": "Zutana Exemplo Penedo",
+  "idade": 54,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2026-08-06",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,63 m, cabelo comprido e preso, usava jaqueta verde. Último registro perto da biblioteca de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0026",
+  "nome": "Mengano de Teste Lunária",
+  "idade": 47,
+  "cidade": "Vila Exemplo",
+  "situacao": "em_aberto",
+  "data": "2025-02-09",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,67 m, cabelo curto, usava vestido estampado. Último registro na rodoviária de Vila Exemplo."
+ },
+ {
+  "id": "REG-0027",
+  "nome": "Mengana Imaginária Alvorada",
+  "idade": 38,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2024-06-28",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,72 m, cabelo curto, usava vestido estampado. Último registro perto da biblioteca de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0028",
+  "nome": "Zutano Modelo Lunária",
+  "idade": 28,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2025-04-24",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,70 m, cabelo crespo, usava camiseta branca. Último registro na rodoviária de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0029",
+  "nome": "Zutano Exemplo Quimera",
+  "idade": 46,
+  "cidade": "Alto da Demonstração",
+  "situacao": "em_aberto",
+  "data": "2026-03-01",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,70 m, cabelo raspado, usava vestido estampado. Último registro na rodoviária de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0030",
+  "nome": "Zutano de Teste Penedo",
+  "idade": 34,
+  "cidade": "Alto da Demonstração",
+  "situacao": "encerrado",
+  "data": "2024-12-10",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,81 m, cabelo comprido e preso, usava camiseta branca. Último registro na saída do mercado municipal de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0031",
+  "nome": "Mengano Imaginário Miragem",
+  "idade": 30,
+  "cidade": "Alto da Demonstração",
+  "situacao": "localizada",
+  "data": "2024-10-01",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,74 m, cabelo comprido e preso, usava vestido estampado. Último registro perto da praça central de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0032",
+  "nome": "Zutana Modelo Quimera",
+  "idade": 85,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2025-05-08",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,68 m, cabelo curto, usava jaqueta verde. Último registro perto da biblioteca de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0033",
+  "nome": "Zutano Fictício Protótipo",
+  "idade": 57,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2026-06-24",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,60 m, cabelo grisalho, usava camisa azul-clara. Último registro na rodoviária de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0034",
+  "nome": "Mengano Fictício Miragem",
+  "idade": 61,
+  "cidade": "Serra Modelo",
+  "situacao": "em_aberto",
+  "data": "2026-08-24",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,67 m, cabelo crespo, usava vestido estampado. Último registro perto da biblioteca de Serra Modelo."
+ },
+ {
+  "id": "REG-0035",
+  "nome": "Zutano Modelo Rascunho",
+  "idade": 44,
+  "cidade": "Serra Modelo",
+  "situacao": "localizada",
+  "data": "2025-04-13",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,69 m, cabelo curto, usava camiseta branca. Último registro perto da biblioteca de Serra Modelo."
+ },
+ {
+  "id": "REG-0036",
+  "nome": "Zutana Exemplo Quimera",
+  "idade": 27,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2024-05-03",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,50 m, cabelo comprido e preso, usava camiseta branca. Último registro perto da biblioteca de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0037",
+  "nome": "Sicrana de Teste Lunária",
+  "idade": 20,
+  "cidade": "Vila Exemplo",
+  "situacao": "em_aberto",
+  "data": "2025-06-11",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,83 m, cabelo curto, usava blusa de lã vinho. Último registro perto da biblioteca de Vila Exemplo."
+ },
+ {
+  "id": "REG-0038",
+  "nome": "Fulana de Teste Miragem",
+  "idade": 54,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2026-05-13",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,62 m, cabelo raspado, usava camiseta branca. Último registro próximo à feira do bairro de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0039",
+  "nome": "Beltrano Imaginário Alvorada",
+  "idade": 79,
+  "cidade": "Alto da Demonstração",
+  "situacao": "em_aberto",
+  "data": "2025-03-01",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,81 m, cabelo comprido e preso, usava camisa azul-clara. Último registro na rodoviária de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0040",
+  "nome": "Zutana Exemplo Rascunho",
+  "idade": 21,
+  "cidade": "Serra Modelo",
+  "situacao": "encerrado",
+  "data": "2025-01-11",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,83 m, cabelo grisalho, usava blusa de lã vinho. Último registro perto da biblioteca de Serra Modelo."
+ },
+ {
+  "id": "REG-0041",
+  "nome": "Sicrano Fictício Lunária",
+  "idade": 60,
+  "cidade": "Vila Exemplo",
+  "situacao": "localizada",
+  "data": "2024-04-26",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,57 m, cabelo comprido e preso, usava camisa azul-clara. Último registro na saída do mercado municipal de Vila Exemplo."
+ },
+ {
+  "id": "REG-0042",
+  "nome": "Fulana Fictícia Miragem",
+  "idade": 82,
+  "cidade": "Alto da Demonstração",
+  "situacao": "em_aberto",
+  "data": "2025-03-21",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,86 m, cabelo raspado, usava vestido estampado. Último registro próximo à feira do bairro de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0043",
+  "nome": "Fulano Imaginário Alvorada",
+  "idade": 29,
+  "cidade": "Serra Modelo",
+  "situacao": "encerrado",
+  "data": "2026-09-04",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,64 m, cabelo comprido e preso, usava casaco cinza. Último registro perto da praça central de Serra Modelo."
+ },
+ {
+  "id": "REG-0044",
+  "nome": "Fulano Fictício Penedo",
+  "idade": 20,
+  "cidade": "Porto Fictício",
+  "situacao": "encerrado",
+  "data": "2025-12-21",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,51 m, cabelo crespo, usava camiseta branca. Último registro na rodoviária de Porto Fictício."
+ },
+ {
+  "id": "REG-0045",
+  "nome": "Zutana de Teste Alvorada",
+  "idade": 18,
+  "cidade": "Campo de Teste",
+  "situacao": "localizada",
+  "data": "2025-10-04",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,75 m, cabelo crespo, usava vestido estampado. Último registro perto da biblioteca de Campo de Teste."
+ },
+ {
+  "id": "REG-0046",
+  "nome": "Beltrano Exemplo Rascunho",
+  "idade": 70,
+  "cidade": "Campo de Teste",
+  "situacao": "localizada",
+  "data": "2025-12-04",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,78 m, cabelo grisalho, usava camisa azul-clara. Último registro perto da praça central de Campo de Teste."
+ },
+ {
+  "id": "REG-0047",
+  "nome": "Mengana Exemplo Ficção",
+  "idade": 32,
+  "cidade": "Vila Exemplo",
+  "situacao": "em_aberto",
+  "data": "2024-02-23",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,74 m, cabelo crespo, usava camisa azul-clara. Último registro na saída do mercado municipal de Vila Exemplo."
+ },
+ {
+  "id": "REG-0048",
+  "nome": "Mengana Modelo Miragem",
+  "idade": 54,
+  "cidade": "Serra Modelo",
+  "situacao": "localizada",
+  "data": "2024-03-04",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,70 m, cabelo curto, usava camisa azul-clara. Último registro na rodoviária de Serra Modelo."
+ },
+ {
+  "id": "REG-0049",
+  "nome": "Sicrana de Teste Quimera",
+  "idade": 70,
+  "cidade": "Vila Exemplo",
+  "situacao": "localizada",
+  "data": "2024-02-10",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,68 m, cabelo raspado, usava camisa azul-clara. Último registro perto da praça central de Vila Exemplo."
+ },
+ {
+  "id": "REG-0050",
+  "nome": "Sicrano Exemplo Lunária",
+  "idade": 32,
+  "cidade": "Vila Exemplo",
+  "situacao": "em_aberto",
+  "data": "2026-06-19",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,73 m, cabelo raspado, usava casaco cinza. Último registro na rodoviária de Vila Exemplo."
+ },
+ {
+  "id": "REG-0051",
+  "nome": "Fulana Exemplo Alvorada",
+  "idade": 50,
+  "cidade": "Vila Exemplo",
+  "situacao": "localizada",
+  "data": "2024-09-07",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,75 m, cabelo curto, usava camiseta branca. Último registro perto da biblioteca de Vila Exemplo."
+ },
+ {
+  "id": "REG-0052",
+  "nome": "Fulana Modelo Quimera",
+  "idade": 33,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "localizada",
+  "data": "2026-04-10",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,55 m, cabelo curto, usava blusa de lã vinho. Último registro perto da praça central de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0053",
+  "nome": "Mengana Imaginária Lunária",
+  "idade": 34,
+  "cidade": "Serra Modelo",
+  "situacao": "localizada",
+  "data": "2026-02-26",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,59 m, cabelo comprido e preso, usava camisa azul-clara. Último registro perto da praça central de Serra Modelo."
+ },
+ {
+  "id": "REG-0054",
+  "nome": "Fulano Imaginário Rascunho",
+  "idade": 39,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2024-03-07",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,82 m, cabelo comprido e preso, usava vestido estampado. Último registro na saída do mercado municipal de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0055",
+  "nome": "Mengano de Teste Penedo",
+  "idade": 79,
+  "cidade": "Campo de Teste",
+  "situacao": "localizada",
+  "data": "2026-07-14",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,55 m, cabelo raspado, usava camiseta branca. Último registro próximo à feira do bairro de Campo de Teste."
+ },
+ {
+  "id": "REG-0056",
+  "nome": "Mengana de Teste Alvorada",
+  "idade": 49,
+  "cidade": "Alto da Demonstração",
+  "situacao": "em_aberto",
+  "data": "2026-10-23",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,67 m, cabelo crespo, usava blusa de lã vinho. Último registro perto da biblioteca de Alto da Demonstração."
+ },
+ {
+  "id": "REG-0057",
+  "nome": "Sicrano Modelo Quimera",
+  "idade": 66,
+  "cidade": "Campo de Teste",
+  "situacao": "em_aberto",
+  "data": "2025-01-10",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,59 m, cabelo crespo, usava vestido estampado. Último registro na rodoviária de Campo de Teste."
+ },
+ {
+  "id": "REG-0058",
+  "nome": "Fulana Imaginária Penedo",
+  "idade": 55,
+  "cidade": "Campo de Teste",
+  "situacao": "localizada",
+  "data": "2025-05-05",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,69 m, cabelo curto, usava vestido estampado. Último registro próximo à feira do bairro de Campo de Teste."
+ },
+ {
+  "id": "REG-0059",
+  "nome": "Beltrano de Teste Lunária",
+  "idade": 47,
+  "cidade": "Serra Modelo",
+  "situacao": "localizada",
+  "data": "2025-04-07",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,51 m, cabelo grisalho, usava camiseta branca. Último registro na saída do mercado municipal de Serra Modelo."
+ },
+ {
+  "id": "REG-0060",
+  "nome": "Zutana Imaginária Alvorada",
+  "idade": 59,
+  "cidade": "Campo de Teste",
+  "situacao": "em_aberto",
+  "data": "2024-06-19",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,58 m, cabelo curto, usava camiseta branca. Último registro próximo à feira do bairro de Campo de Teste."
+ },
+ {
+  "id": "REG-0061",
+  "nome": "Beltrano de Teste Quimera",
+  "idade": 63,
+  "cidade": "Campo de Teste",
+  "situacao": "localizada",
+  "data": "2024-03-17",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,59 m, cabelo comprido e preso, usava camisa azul-clara. Último registro na rodoviária de Campo de Teste."
+ },
+ {
+  "id": "REG-0062",
+  "nome": "Fulana de Teste Rascunho",
+  "idade": 19,
+  "cidade": "Serra Modelo",
+  "situacao": "localizada",
+  "data": "2026-10-13",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,55 m, cabelo comprido e preso, usava jaqueta verde. Último registro perto da biblioteca de Serra Modelo."
+ },
+ {
+  "id": "REG-0063",
+  "nome": "Sicrana Fictícia Rascunho",
+  "idade": 48,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "encerrado",
+  "data": "2026-02-01",
+  "descricao": "Personagem fictícia, criada para esta demonstração. Altura aproximada de 1,75 m, cabelo comprido e preso, usava vestido estampado. Último registro perto da biblioteca de Lagoa Imaginária."
+ },
+ {
+  "id": "REG-0064",
+  "nome": "Mengano Modelo Rascunho",
+  "idade": 28,
+  "cidade": "Lagoa Imaginária",
+  "situacao": "em_aberto",
+  "data": "2024-01-19",
+  "descricao": "Personagem fictício, criado para esta demonstração. Altura aproximada de 1,54 m, cabelo comprido e preso, usava blusa de lã vinho. Último registro perto da biblioteca de Lagoa Imaginária."
+ }
+]
