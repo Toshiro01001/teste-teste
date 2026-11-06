@@ -464,7 +464,7 @@ function auditoria() {
       else arquivos.push(c);
     }
   })(RAIZ);
-  ok('sem PNG, JPG ou GIF no projeto', !arquivos.filter((a) => a !== path.join('docs', 'tela.webp') && !a.includes('capturas')).some((a) => /\.(png|jpe?g|gif|webp)$/i.test(a)));
+  ok('sem PNG, JPG ou GIF no projeto', !arquivos.filter((a) => !/docs[\\/]tela\.webp$|capturas/.test(a)).some((a) => /\.(png|jpe?g|gif|webp)$/i.test(a)));
   for (const a of arquivos) {
     const t = fs.readFileSync(a, 'utf8');
     const rel = path.relative(RAIZ, a);
