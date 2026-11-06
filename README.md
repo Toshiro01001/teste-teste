@@ -2,7 +2,7 @@
 
 ![Consulta de registros fictícios no Fichário](docs/tela.webp)
 
-Sistema de consulta e cadastro de registros, feito como demonstração técnica.
+Fiz este sistema de consulta e cadastro de registros como demonstração técnica.
 
 **Todas as pessoas e dados são fictícios.** Não é um serviço oficial, não tem ligação com nenhum órgão público e não recebe nem encaminha informações. Em caso real, procure a polícia.
 

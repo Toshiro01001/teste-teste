@@ -8,6 +8,12 @@
 <meta name="robots" content="noindex">
 <meta name="description" content="Sistema de demonstração de consulta e cadastro de registros. Todas as pessoas e dados são fictícios.">
 <title>Fichário, sistema de demonstração</title>
+<meta name="theme-color" content="#2b2039">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Fichário: sistema de consulta de demonstração">
+<meta property="og:description" content="Consulta com filtros, cadastro, CSV e API em Java. Todas as pessoas e dados são fictícios.">
+<meta property="og:image" content="https://toshiro01001.github.io/teste-teste/docs/tela.webp">
 <link rel="icon" href="assets/icone.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/estilo.css">
 <script src="assets/config.js" defer></script>
@@ -15,7 +21,7 @@
 </head>
 <body>
 <a class="pular" href="#conteudo" id="pular">Pular para o conteúdo</a>
-<p class="faixa">Sistema de demonstração. Todas as pessoas e dados são fictícios.</p>
+<p class="faixa" role="region" aria-label="Aviso de demonstração">Sistema de demonstração. Todas as pessoas e dados são fictícios.</p>
 
 <header class="topo">
   <a class="marca" href="#/">Fichário</a>
@@ -28,7 +34,7 @@
   </nav>
 </header>
 
-<p class="aviso-real"><strong>Em caso real, procure a polícia imediatamente</strong> (em emergência, ligue 190). Este site não recebe nem encaminha nenhuma informação.</p>
+<p class="aviso-real" role="region" aria-label="Aviso sobre casos reais"><strong>Em caso real, procure a polícia imediatamente</strong> (em emergência, ligue 190). Este site não recebe nem encaminha nenhuma informação.</p>
 
 <main id="conteudo" tabindex="-1">
   <noscript><p class="alerta">Este sistema precisa de JavaScript ligado para funcionar.</p></noscript>
@@ -212,7 +218,7 @@
 </main>
 
 <footer class="rodape">
-  <p>Demonstração feita por <a href="https://mileumalinhas.com.br" rel="noopener">Mil e Uma Linhas!</a></p>
+  <p>Demonstração feita por <a href="https://mileumalinhas.com.br" rel="noopener">Mil e Uma Linhas!</a>. Quer um sistema assim? Escreva para <a href="mailto:contato@mileumalinhas.com.br">contato@mileumalinhas.com.br</a>.</p>
   <p>Dados vindos de: <span id="modo-rodape"></span>. <a href="#/como-funciona">Como isto funciona</a></p>
 </footer>
 <div class="invisivel" id="anuncio" role="status"></div>

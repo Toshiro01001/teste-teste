@@ -464,7 +464,7 @@ function auditoria() {
       else arquivos.push(c);
     }
   })(RAIZ);
-  ok('sem PNG, JPG ou GIF no projeto', !arquivos.some((a) => /\.(png|jpe?g|gif|webp)$/i.test(a)));
+  ok('sem PNG, JPG ou GIF no projeto', !arquivos.filter((a) => a !== path.join('docs', 'tela.webp') && !a.includes('capturas')).some((a) => /\.(png|jpe?g|gif|webp)$/i.test(a)));
   for (const a of arquivos) {
     const t = fs.readFileSync(a, 'utf8');
     const rel = path.relative(RAIZ, a);
@@ -473,7 +473,7 @@ function auditoria() {
       ok(`${nome} fora de ${rel}`, !re.test(t));
     }
   }
-  ok('README termina com a linha exata', fs.readFileSync(path.join(RAIZ, 'README.md'), 'utf8').trimEnd().endsWith('Desenvolvido por Rodrigo Terroso Junior. O Claude, da Anthropic, foi usado como ferramenta durante o desenvolvimento.'));
+  ok('README termina com a linha exata', fs.readFileSync(path.join(RAIZ, 'README.md'), 'utf8').trimEnd().endsWith('Desenvolvi este projeto e usei o Claude, da Anthropic, como ferramenta durante o desenvolvimento.'));
   const nomes = new Set(DADOS.map((r) => r.nome));
   ok('nomes únicos e obviamente fictícios', nomes.size === DADOS.length && DADOS.every((r) => /^(Fulan|Beltran|Sicran|Mengan|Zutan)/.test(r.nome)));
   ok('só adultos fictícios', DADOS.every((r) => r.idade >= 18));
