@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toshiro01001.github.io/teste-teste/sitemap.xml
