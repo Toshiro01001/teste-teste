@@ -85,7 +85,7 @@
       return q.toString();
     };
     return {
-      nome: 'API Java em ' + base,
+      nome: 'um servidor local (API Java) em ' + base,
       emApi: true,
       listar: (c) => pedir('/api/registros?' + query(c)),
       resumo: (c) => pedir('/api/resumo?' + query(c)),
@@ -125,7 +125,7 @@
     }
     const comparar = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
     return {
-      nome: 'arquivo estático dados/registros.json',
+      nome: 'um arquivo estático guardado junto com o site (dados/registros.json)',
       emApi: false,
       async listar(c) {
         const achados = filtrar(await carregar(), c);
@@ -440,7 +440,7 @@
       a.click();
       a.remove();
       setTimeout(() => URL.revokeObjectURL(url), 2000);
-      anunciar('Arquivo CSV gerado com ' + plural(itens.length, 'registro', 'registros') + '.');
+      anunciar('Planilha (arquivo CSV) baixada com ' + plural(itens.length, 'registro', 'registros') + '.');
     } catch (e) {
       mostrarErroGeral(e.message);
     } finally {
