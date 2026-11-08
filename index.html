@@ -42,12 +42,13 @@
 
   <section id="v-lista" hidden>
     <h1 tabindex="-1">Consulta de registros</h1>
+    <p class="nota intro">Esta é uma lista de pessoas inventadas, como exemplo de um sistema de cadastro. Digite um nome na caixa de busca ou toque em um nome da lista para abrir a ficha completa.</p>
     <div class="consulta">
       <div class="col-filtros">
         <form id="f-filtros" novalidate>
           <div class="campo">
             <label for="busca">Buscar por nome, cidade ou número</label>
-            <input id="busca" name="busca" type="search" maxlength="80" autocomplete="off">
+            <input id="busca" name="busca" type="search" maxlength="80" autocomplete="off" placeholder="Exemplo: Beltrano">
           </div>
           <details id="mais-filtros">
             <summary>Mais filtros <span id="qtd-filtros"></span></summary>
@@ -95,7 +96,7 @@
                 <option value="-cidade">Cidade, de Z a A</option>
               </select>
             </div>
-            <button type="button" class="botao secundario" id="exportar">Exportar CSV</button>
+            <button type="button" class="botao secundario" id="exportar" title="Baixa a lista filtrada em um arquivo CSV, que abre no Excel ou em outra planilha">Baixar planilha</button>
           </div>
           <table class="tabela" id="tabela" role="table">
             <caption class="invisivel">Registros fictícios encontrados</caption>
@@ -118,7 +119,7 @@
 
       <section class="col-contagens" aria-labelledby="titulo-contagens">
         <h2 id="titulo-contagens">Contagens</h2>
-        <p class="nota">Acompanham os filtros escolhidos.</p>
+        <p class="nota">Quantos registros há em cada cidade e em cada faixa de idade. Os números mudam conforme a busca e os filtros que você escolher.</p>
         <h3>Por cidade</h3>
         <ul class="medidas" id="por-cidade"></ul>
         <h3>Por idade</h3>
@@ -145,9 +146,10 @@
 
       <div class="painel-form">
         <h2>Tenho uma informação</h2>
+        <p class="nota">Este formulário mostra como alguém poderia mandar uma informação sobre a pessoa da ficha. Preencha os campos e toque em "Testar o envio" para ver a conferência funcionando.</p>
         <p class="nota-forte" id="nota-informacao"></p>
         <form id="f-info" novalidate>
-          <p class="nota">Preencha com dados inventados. Só o contato é opcional.</p>
+          <p class="nota">Preencha com dados inventados. Só o e-mail é opcional.</p>
           <div class="resumo-erros" id="f-info-erros" tabindex="-1" role="alert" hidden></div>
           <div class="campo"><label for="i-local">Onde foi</label><input id="i-local" name="local" maxlength="80" autocomplete="off" aria-required="true" aria-describedby="i-local-erro"><p class="erro" id="i-local-erro" hidden></p></div>
           <div class="campo"><label for="i-data">Quando foi</label><input id="i-data" name="data" type="date" aria-required="true" aria-describedby="i-data-erro"><p class="erro" id="i-data-erro" hidden></p></div>
@@ -168,6 +170,7 @@
   <section id="v-novo" hidden>
     <h1 tabindex="-1">Novo registro</h1>
     <div class="painel-form estreito">
+      <p class="nota">Aqui você cadastra uma pessoa inventada para ver como o sistema confere cada campo. Preencha tudo e toque em "Cadastrar registro". Se algo estiver errado, a tela aponta o campo e explica o motivo.</p>
       <p class="nota-forte" id="nota-novo"></p>
       <form id="f-novo" novalidate>
         <p class="nota">Use só dados inventados. Todos os campos são obrigatórios.</p>
@@ -192,12 +195,30 @@
 
   <section id="v-como" class="texto" hidden>
     <h1 tabindex="-1">Como isto funciona</h1>
-    <p>Este sistema é um cadastro que dá para consultar. Ele tem duas partes que conversam: a tela que você está vendo e um servidor, que guarda e confere os dados.</p>
-    <h2>A tela</h2>
-    <p>Roda no navegador, sem instalar nada. Busca, filtros, ordenação, páginas, contagens e exportação para planilha ficam aqui. Cada ficha e cada busca tem endereço próprio: copie o link e a mesma tela abre em outro aparelho. Foi feita para funcionar pelo teclado e com leitor de tela.</p>
-    <h2>Os dados</h2>
-    <p>Na versão publicada, as fichas vêm de um arquivo fixo e o que você cadastra fica só nesta aba. Na versão com servidor, um programa em Java recebe os pedidos, confere cada campo, recusa o que estiver errado e explica o motivo. O projeto traz ainda o esquema SQL, o desenho das tabelas para guardar tudo em um banco de dados.</p>
+    <p>O Fichário é um exemplo de sistema de cadastro: uma lista de pessoas inventadas que você pode buscar, filtrar, abrir uma por uma e aumentar com novos registros. Ele existe para mostrar o tipo de sistema que a Mil e Uma Linhas! faz. Nada aqui é real e nada é vendido ou cobrado.</p>
+    <h2>O que você pode fazer</h2>
+    <ul>
+      <li><strong>Consulta:</strong> digite um nome, uma cidade ou um número na caixa de busca. A lista muda enquanto você digita. Toque em um nome para abrir a ficha completa.</li>
+      <li><strong>Mais filtros:</strong> escolha a cidade, a faixa de idade e o período. As abas acima da lista separam por situação (em aberto, localizada, encerrado).</li>
+      <li><strong>Baixar planilha:</strong> salva a lista que está na tela em um arquivo que abre no Excel ou em outra planilha.</li>
+      <li><strong>Novo registro:</strong> cadastra uma pessoa inventada. Se algum campo estiver errado, a tela aponta qual e explica o motivo.</li>
+    </ul>
+    <h2>Por dentro, em linguagem comum</h2>
+    <p>O sistema tem duas partes que conversam. A primeira é a tela que você está vendo, que roda no navegador sem instalar nada: a busca, os filtros, a ordenação, as páginas, as contagens e a planilha ficam todos aqui. Cada ficha e cada busca tem endereço próprio: copie o link da barra do navegador e a mesma tela abre em outro aparelho. A tela foi feita para funcionar pelo teclado e com leitor de tela.</p>
+    <p>A segunda parte é de onde vêm os dados. Nesta versão publicada, as fichas vêm de um arquivo fixo guardado junto com o site, e o que você cadastra fica só nesta aba: some ao recarregar a página. Na versão com servidor, um programa em Java recebe os pedidos, confere cada campo, recusa o que estiver errado e explica o motivo. O projeto traz ainda o desenho das tabelas para guardar tudo em um banco de dados.</p>
     <p>Agora os dados desta tela vêm de: <strong id="modo-como"></strong>.</p>
+    <details class="tecnico" id="detalhes-tecnicos">
+      <summary>Detalhes técnicos</summary>
+      <ul>
+        <li><strong>Tela:</strong> HTML, CSS e JavaScript sem bibliotecas, sem etapa de build e sem nada carregado de terceiros. As rotas (consulta, ficha, novo registro) e os filtros ficam no endereço da página, depois do símbolo #.</li>
+        <li><strong>Fontes de dados:</strong> o arquivo <code>dados/registros.json</code> (modo estático) ou a API em Java (modo servidor). As duas respondem às mesmas funções no código, e um teste confere que dão os mesmos resultados.</li>
+        <li><strong>API (a parte do servidor que responde aos pedidos da tela):</strong> Java 17 puro, com <code>com.sun.net.httpserver</code>, sem framework e sem dependência externa. Rotas REST para listar, abrir, criar, atualizar e apagar registros e para as contagens. Erros de preenchimento voltam com status 400 e o motivo por campo. Os dados ficam na memória do servidor.</li>
+        <li><strong>Banco de dados:</strong> o esquema SQL está em <code>servidor-java/sql/esquema.sql</code> e é testado em SQLite. O servidor da demonstração não usa banco; para ligar um, troca-se a classe de repositório por uma versão com JDBC.</li>
+        <li><strong>Segurança:</strong> Content-Security-Policy restrita (nada externo), todo dado variável entra como texto e nunca como HTML, as mesmas regras de validação rodam na tela e no servidor, o servidor só deixa alterar dados a partir de uma origem autorizada e recusa corpos acima de 64 KB, e a planilha protege contra fórmulas injetadas. Não há login: numa publicação real, a API ficaria atrás de HTTPS com autenticação.</li>
+        <li><strong>Acessibilidade e testes:</strong> navegação por teclado, leitor de tela e contraste AA conferidos por testes automatizados no Chromium (computador, iPhone 13 e tela de 320 px), além de testes da API em Java e do esquema SQL.</li>
+      </ul>
+      <p>O código completo e as instruções para rodar estão no README do repositório.</p>
+    </details>
     <h2>O que dá para adaptar</h2>
     <p>A estrutura é a mesma para qualquer cadastro. Mudam os campos, os filtros e as regras:</p>
     <ul>

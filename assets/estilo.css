@@ -266,6 +266,12 @@ td, .tabela td { font-variant-numeric: tabular-nums; }
 .texto h2 { margin: 1.5rem 0 .5rem; }
 .texto p, .texto li { font-size: 1.0625rem; line-height: 1.6; }
 .texto ul { padding-left: 1.25rem; }
+.intro { max-width: 42rem; margin: -.5rem 0 1rem; line-height: 1.5; }
+.tecnico { margin: 1.5rem 0; padding: 0 1rem; background: var(--papel); border: 1px solid var(--filete); border-radius: 6px; }
+.tecnico > summary { padding: .625rem 0; }
+.tecnico ul { margin: .5rem 0 1rem; }
+.tecnico li { margin-bottom: .5rem; overflow-wrap: anywhere; }
+.tecnico code { font-size: .9375em; background: #efebf3; padding: 0 .25em; border-radius: 3px; }
 
 .rodape { border-top: 1px solid var(--filete); padding: 1rem; max-width: 80rem; margin: 0 auto; }
 .rodape p { margin: 0 0 .25rem; }
